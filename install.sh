@@ -344,8 +344,8 @@ function modify_ws() {
 
 function configure_nginx() {
   nginx_conf="/etc/nginx/conf.d/${domain}.conf"
-  cd /etc/nginx/conf.d/ && rm -f ${domain}.conf && wget -O ${domain}.conf https://raw.githubusercontent.com/wulabing/Xray_onekey/${github_branch}/config/web.conf
-  sed -i "s/xxx/${domain}/g" ${nginx_conf}
+  #cd /etc/nginx/conf.d/ && rm -f ${domain}.conf && wget -O ${domain}.conf https://raw.githubusercontent.com/wulabing/Xray_onekey/${github_branch}/config/web.conf
+  #sed -i "s/xxx/${domain}/g" ${nginx_conf}
   judge "Nginx 配置 修改"
   
   systemctl enable nginx
